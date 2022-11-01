@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 <body>
     <div id="container">
         <div>
             <h1>Login Page</h1>
             <p><h3>Log In</h3>
-            <form id="login" action="login.php" method="post">
-                <p><input id="email_lgin" type="email" name="email"  placeholder="example@email.com"></p>
-                <p><input id="password_lgin" type="password" name="password" placeholder="Password"></form></p>
-                <p><input id="login_btn" type="submit" name="login_btn" value="Log In"></p>
+            <form id="login" method="post" >
+                <p><input required id="email_lgin" type="email" name="email" pattern="^[a-z].*@([a-z0-9-]{2,8}\.)+[a-z]{2,8}$"  placeholder="example@email.com" ></p>
+                <p><input required id="password_lgin" type="password" name="password" placeholder="Password"></p>
+                <p><button id="login_btn" name="login_btn">Log In</button></p>
             </form></p>
         </div>
         <div>
         <p>
             <h3>Sign Up</h3>
-            <form id="signup" action="signup.php" method="post">
-                <p><input id="name_snup" type="text" name="name" placeholder="Name"></p>
-                <p><input id="email_snup" type="email" name="email" placeholder="example@email.com"></p>
-                <p><input id="password_snup" type="password" name="password" placeholder="Password"></p>
-                <p><input id="confirm_snup" type="password" name="confirm password" placeholder="Confirm password"></p>
-                <p><input id="signup_btn" type="submit" name="signup_btn" value="Sign Up"></p>
+            <form id="signup" method="post">
+                <p><input required id="name_snup" type="text" name="name" placeholder="Name"></p>
+                <p><input required id="email_snup" type="email" name="email" pattern="^[a-z].*@([a-z0-9-]{2,8}\.)+[a-z]{2,8}$" placeholder="example@email.com"></p>
+                <p><input required id="password_snup" type="password" name="password" placeholder="Password"></p>
+                <p><input required id="confirm_snup" type="password" name="confirm password" placeholder="Confirm password"></p>
+                <p><button id="signup_btn" name="signup_btn">Sign Up</button></p>
         </p>
         </div>
     </div>
